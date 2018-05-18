@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Standard Template</title>
+    <link rel="stylesheet" type="text/css" href="index-styles.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html" class="navbarLinks">Home</a>
+        <a href="StandardTemplate.html" class="navbarLinks">Standard</a>
+        <a href="OneSidebarTemplate.html" class="navbarLinks">Single Sidebar</a>
+    </div>
+    <div id="sizeModify">
+        <h1 id="starterHeader">Welcome to the Standard Template!</h1>
+        <hr>
+        <h3>Details</h3>
+        <p>This template contains a navigation bar (top), a h1 header, h3 headers, h4 headers, hr tags, and paragraphs.</p>
+        <hr>
+        <h3>Change the template!</h3>
+        <p>This is where you can modify the colors of the page. You can also change the font size and thickness of certain elements.</p>
+        <div id="sliders">
+            <h4>Background Color: Body</h4>
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="backgroundColorR">
+            <input type="text" name="R:" id="backgroundColorRBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="backgroundColorG">
+            <input type="text" name="G:" id="backgroundColorGBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="backgroundColorB">
+            <input type="text" name="B:" id="backgroundColorBBox" class="textBox">
+            <br>
+            <h4>Text Color: Paragraphs</h4>
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorR">
+            <input type="text" name="R:" id="pTextColorRBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorG">
+            <input type="text" name="G:" id="pTextColorGBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorB">
+            <input type="text" name="B:" id="pTextColorBBox" class="textBox">
+            <br>
+            <h4>Text Color: Headers</h4>
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="hTextColorR">
+            <input type="text" name="R:" id="hTextColorRBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="hTextColorG">
+            <input type="text" name="G:" id="hTextColorGBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="hTextColorB">
+            <input type="text" name="B:" id="hTextColorBBox" class="textBox">
+            <br>
+            <h4>Background Color: Nav Bar</h4>
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="nbBackgroundColorR">
+            <input type="text" name="R:" id="nbBackgroundColorRBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="nbBackgroundColorG">
+            <input type="text" name="G:" id="nbBackgroundColorGBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="nbBackgroundColorB">
+            <input type="text" name="B:" id="nbBackgroundColorBBox" class="textBox">
+            <br>
+            <h4>Text Color: Nav Bar Links</h4>
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="nbLinkColorR">
+            <input type="text" name="R:" id="nbLinkColorRBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="nbLinkColorG">
+            <input type="text" name="G:" id="nbLinkColorGBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="nbLinkColorB">
+            <input type="text" name="B:" id="nbLinkColorBBox" class="textBox">
+            <br>
+            <h4>Color: HR</h4>
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="hrColorR">
+            <input type="text" name="R:" id="hrColorRBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="hrColorG">
+            <input type="text" name="G:" id="hrColorGBox" class="textBox">
+            <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="hrColorB">
+            <input type="text" name="B:" id="hrColorBBox" class="textBox">
+        </div>
+    </div>
+    <script>
+        var h1s = document.getElementsByTagName("H1");
+        var h3s = document.getElementsByTagName("H3");
+        var h4s = document.getElementsByTagName("H4");
+
+        var bgcRSlide = document.getElementById("backgroundColorR");
+        var bgcGSlide = document.getElementById("backgroundColorG");
+        var bgcBSlide = document.getElementById("backgroundColorB");
+
+        var bgcRBox = document.getElementById("backgroundColorRBox");
+        var bgcGBox = document.getElementById("backgroundColorGBox");
+        var bgcBBox = document.getElementById("backgroundColorBBox");
+
+        var ptcRSlide = document.getElementById("pTextColorR");
+        var ptcGSlide = document.getElementById("pTextColorG");
+        var ptcBSlide = document.getElementById("pTextColorB");
+
+        var ptcRBox = document.getElementById("pTextColorRBox");
+        var ptcGBox = document.getElementById("pTextColorGBox");
+        var ptcBBox = document.getElementById("pTextColorBBox");
+
+        var htcRSlide = document.getElementById("hTextColorR");
+        var htcGSlide = document.getElementById("hTextColorG");
+        var htcBSlide = document.getElementById("hTextColorB");
+
+        var htcRBox = document.getElementById("hTextColorRBox");
+        var htcGBox = document.getElementById("hTextColorGBox");
+        var htcBBox = document.getElementById("hTextColorBBox");
+
+        var nbbgRSlide = document.getElementById("nbBackgroundColorR");
+        var nbbgGSlide = document.getElementById("nbBackgroundColorG");
+        var nbbgBSlide = document.getElementById("nbBackgroundColorB");
+
+        var nbbgRBox = document.getElementById("nbBackgroundColorRBox");
+        var nbbgGBox = document.getElementById("nbBackgroundColorGBox");
+        var nbbgBBox = document.getElementById("nbBackgroundColorBBox");
+
+        var nblcRSlide = document.getElementById("nbLinkColorR");
+        var nblcGSlide = document.getElementById("nbLinkColorG");
+        var nblcBSlide = document.getElementById("nbLinkColorB");
+
+        var nblcRBox = document.getElementById("nbLinkColorRBox");
+        var nblcGBox = document.getElementById("nbLinkColorGBox");
+        var nblcBBox = document.getElementById("nbLinkColorBBox");
+
+        var hrcRSlide = document.getElementById("hrColorR");
+        var hrcGSlide = document.getElementById("hrColorG");
+        var hrcBSlide = document.getElementById("hrColorB");
+
+        var hrcRBox = document.getElementById("hrColorRBox");
+        var hrcGBox = document.getElementById("hrColorGBox");
+        var hrcBBox = document.getElementById("hrColorBBox");
+
+        var r;
+        var g;
+        var b;
+
+        //B.G.C. for Body
+        bgcRBox.addEventListener("change", function () {
+            r = bgcRBox.value;
+            g = bgcGBox.value;
+            b = bgcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            bgcRSlide.value = r;
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        bgcGBox.addEventListener("change", function () {
+            r = bgcRBox.value;
+            g = bgcGBox.value;
+            b = bgcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            bgcGSlide.value = g;
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        bgcBBox.addEventListener("change", function () {
+            r = bgcRBox.value;
+            g = bgcGBox.value;
+            b = bgcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            bgcBSlide.value = b;
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        bgcRSlide.addEventListener("change", function() {
+            r = bgcRSlide.value;
+            g = bgcGSlide.value;
+            b = bgcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            bgcRBox.value = r;
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        bgcGSlide.addEventListener("change", function() {
+            r = bgcRSlide.value;
+            g = bgcGSlide.value;
+            b = bgcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            bgcGBox.value = g;
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        bgcBSlide.addEventListener("change", function() {
+            r = bgcRSlide.value;
+            g = bgcGSlide.value;
+            b = bgcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            bgcBBox.value = b;
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        //T.C. for Paragraphs
+        ptcRBox.addEventListener("change", function () {
+            r = ptcRBox.value;
+            g = ptcGBox.value;
+            b = ptcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            ptcRSlide.value = r;
+            document.body.style.color = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        ptcGBox.addEventListener("change", function () {
+            r = ptcRBox.value;
+            g = ptcGBox.value;
+            b = ptcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            ptcGSlide.value = g;
+            document.body.style.color = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        ptcBBox.addEventListener("change", function () {
+            r = ptcRBox.value;
+            g = ptcGBox.value;
+            b = ptcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            ptcBSlide.value = b;
+            document.body.style.color = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        ptcRSlide.addEventListener("change", function() {
+            r = ptcRSlide.value;
+            g = ptcGSlide.value;
+            b = ptcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            ptcRBox.value = r;
+            document.body.style.color = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        ptcGSlide.addEventListener("change", function() {
+            r = ptcRSlide.value;
+            g = ptcGSlide.value;
+            b = ptcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            ptcGBox.value = g;
+            document.body.style.color = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        ptcBSlide.addEventListener("change", function() {
+            r = ptcRSlide.value;
+            g = ptcGSlide.value;
+            b = ptcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            ptcBBox.value = b;
+            document.body.style.color = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        //T.C. for Headers
+        htcRBox.addEventListener("change", function () {
+            r = htcRBox.value;
+            g = htcGBox.value;
+            b = htcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            htcRSlide.value = r;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                h1s[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var j = 0; j < document.getElementsByTagName("H3").length; j++) {
+                h3s[j].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var k = 0; k < document.getElementsByTagName("H4").length; k++) {
+                h4s[k].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        htcGBox.addEventListener("change", function () {
+            r = htcRBox.value;
+            g = htcGBox.value;
+            b = htcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            htcGSlide.value = g;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                h1s[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var j = 0; j < document.getElementsByTagName("H3").length; j++) {
+                h3s[j].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var k = 0; k < document.getElementsByTagName("H4").length; k++) {
+                h4s[k].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        htcBBox.addEventListener("change", function () {
+            r = htcRBox.value;
+            g = htcGBox.value;
+            b = htcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            htcBSlide.value = b;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                h1s[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var j = 0; j < document.getElementsByTagName("H3").length; j++) {
+                h3s[j].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var k = 0; k < document.getElementsByTagName("H4").length; k++) {
+                h4s[k].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        htcRSlide.addEventListener("change", function () {
+            r = htcRSlide.value;
+            g = htcGSlide.value;
+            b = htcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            htcRBox.value = r;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                h1s[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var j = 0; j < document.getElementsByTagName("H3").length; j++) {
+                h3s[j].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var k = 0; k < document.getElementsByTagName("H4").length; k++) {
+                h4s[k].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        htcGSlide.addEventListener("change", function () {
+            r = htcRSlide.value;
+            g = htcGSlide.value;
+            b = htcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            htcGBox.value = g;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                h1s[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var j = 0; j < document.getElementsByTagName("H3").length; j++) {
+                h3s[j].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var k = 0; k < document.getElementsByTagName("H4").length; k++) {
+                h4s[k].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        htcBSlide.addEventListener("change", function () {
+            r = htcRSlide.value;
+            g = htcGSlide.value;
+            b = htcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            htcBBox.value = b;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                h1s[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var j = 0; j < document.getElementsByTagName("H3").length; j++) {
+                h3s[j].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+            for (var k = 0; k < document.getElementsByTagName("H4").length; k++) {
+                h4s[k].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        //B.G.C for Nav Bar
+        nbbgRBox.addEventListener("change", function () {
+            r = nbbgRBox.value;
+            g = nbbgGBox.value;
+            b = nbbgBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nbbgRSlide.value = r;
+            document.getElementById("navbar").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        nbbgGBox.addEventListener("change", function () {
+            r = nbbgRBox.value;
+            g = nbbgGBox.value;
+            b = nbbgBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nbbgGSlide.value = g;
+            document.getElementById("navbar").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        nbbgBBox.addEventListener("change", function () {
+            r = nbbgRBox.value;
+            g = nbbgGBox.value;
+            b = nbbgBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nbbgBSlide.value = b;
+            document.getElementById("navbar").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        nbbgRSlide.addEventListener("change", function () {
+            r = nbbgRSlide.value;
+            g = nbbgGSlide.value;
+            b = nbbgBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nbbgRBox.value = r;
+            document.getElementById("navbar").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        nbbgGSlide.addEventListener("change", function () {
+            r = nbbgRSlide.value;
+            g = nbbgGSlide.value;
+            b = nbbgBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nbbgGBox.value = g;
+            document.getElementById("navbar").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        nbbgBSlide.addEventListener("change", function () {
+            r = nbbgRSlide.value;
+            g = nbbgGSlide.value;
+            b = nbbgBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nbbgBBox.value = b;
+            document.getElementById("navbar").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        });
+
+        //T.C. for Nav Bar Links
+        nblcRBox.addEventListener("change", function () {
+            r = nblcRBox.value;
+            g = nblcGBox.value;
+            b = nblcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nblcRSlide.value = r;
+            for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
+                document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        nblcGBox.addEventListener("change", function () {
+            r = nblcRBox.value;
+            g = nblcGBox.value;
+            b = nblcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nblcGSlide.value = g;
+            for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
+                document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        nblcBBox.addEventListener("change", function () {
+            r = nblcRBox.value;
+            g = nblcGBox.value;
+            b = nblcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nblcBSlide.value = b;
+            for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
+                document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        nblcRSlide.addEventListener("change", function () {
+            r = nblcRSlide.value;
+            g = nblcGSlide.value;
+            b = nblcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nblcRBox.value = r;
+            for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
+                document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        nblcGSlide.addEventListener("change", function () {
+            r = nblcRSlide.value;
+            g = nblcGSlide.value;
+            b = nblcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nblcGBox.value = g;
+            for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
+                document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        nblcBSlide.addEventListener("change", function () {
+            r = nblcRSlide.value;
+            g = nblcGSlide.value;
+            b = nblcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            nblcBBox.value = b;
+            for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
+                document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        })
+
+        //Color for HR
+        hrcRBox.addEventListener("change", function () {
+            r = hrcRBox.value;
+            g = hrcGBox.value;
+            b = hrcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            hrcRSlide.value = r;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                document.getElementsByTagName("HR")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+                document.getElementsByTagName("HR")[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        hrcGBox.addEventListener("change", function () {
+            r = hrcRBox.value;
+            g = hrcGBox.value;
+            b = hrcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            hrcGSlide.value = g;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                document.getElementsByTagName("HR")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+                document.getElementsByTagName("HR")[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        hrcBBox.addEventListener("change", function () {
+            r = hrcRBox.value;
+            g = hrcGBox.value;
+            b = hrcBBox.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            hrcBSlide.value = b;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                document.getElementsByTagName("HR")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+                document.getElementsByTagName("HR")[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        hrcRSlide.addEventListener("change", function () {
+            r = hrcRSlide.value;
+            g = hrcGSlide.value;
+            b = hrcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            hrcRBox.value = r;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                document.getElementsByTagName("HR")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+                document.getElementsByTagName("HR")[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        hrcGSlide.addEventListener("change", function () {
+            r = hrcRSlide.value;
+            g = hrcGSlide.value;
+            b = hrcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            hrcGBox.value = g;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                document.getElementsByTagName("HR")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+                document.getElementsByTagName("HR")[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        hrcBSlide.addEventListener("change", function () {
+            r = hrcRSlide.value;
+            g = hrcGSlide.value;
+            b = hrcBSlide.value;
+            r = Math.floor(r);
+            g = Math.floor(g);
+            b = Math.floor(b);
+            hrcBBox.value = b;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                document.getElementsByTagName("HR")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+                document.getElementsByTagName("HR")[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+    </script>
+</body>
+</html>
