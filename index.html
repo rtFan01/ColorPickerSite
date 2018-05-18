@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Picker Page</title>
+    <link rel="stylesheet" type="text/css" href="index-styles.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html" class="navbarLinks">Home</a>
+        <a href="StandardTemplate.html" class="navbarLinks">Standard</a>
+        <a href="OneSidebarTemplate.html" class="navbarLinks">Single Sidebar</a>
+    </div>
+    <div id="sizeModify">
+        <h1 id="starterHeader">Welcome to the Color Picker Page!</h1>
+        <hr>
+        <div>
+            <button id="arrowL"><</button>
+        </div>
+        <div>
+            <button id="arrowR">></button>
+        </div>
+        <br>
+        <h3>Templates</h3>
+        <div id="templateDiv"><p>This template contains a navigation bar (top), a h1 header, h3 headers, h4 headers, and paragraphs. Check the standard template out <a href="StandardTemplate.html">here!</a></p></div>
+    </div>
+
+    <script>
+        var LB = document.getElementById("arrowL");
+        var RB = document.getElementById("arrowR");
+        var changingDiv = document.getElementById("templateDiv");
+        var number = 0;
+
+        var templateOne = "<p>This template contains a navigation bar (top), a h1 header, h3 headers, h4 headers, and paragraphs. Check the standard template out <a href=\"StandardTemplate.html\">here!</a></p>";
+
+        var templateTwo = "<p>This template contains a navigation bar (top), a sidebar (left), a h1 header, h3 headers, h4 headers, hr tags, and paragraphs. Check the single sidebar template out <a href=\"OneSidebarTemplate.html\">here!</a></p>";
+
+        var onLBClick = function () {
+            if (number === 0) {
+                number = 1;
+                changingDiv.innerHTML = templateTwo;
+            } else if (number === 1) {
+                number = 0
+                changingDiv.innerHTML = templateOne
+            }
+        };
+
+        var onRBClick = function () {
+            if (number === 0) {
+                number = 1;
+                changingDiv.innerHTML = templateTwo;
+            } else if (number === 1) {
+                number = 0
+                changingDiv.innerHTML = templateOne
+            }
+        };
+
+        LB.addEventListener("click", onLBClick)
+        RB.addEventListener("click", onRBClick)
+    </script>
+</body>
+</html>
