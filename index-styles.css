@@ -36,6 +36,13 @@ a:link, a:hover, a:visited {
     font-size: 1.25em;
 }
 
+.sidebarRightLinks {
+    color: #abada8;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1.25em;
+}
+
 #sidebar {
     position: fixed;
     width: 25%;
@@ -44,6 +51,19 @@ a:link, a:hover, a:visited {
     top: 10%;
     left: 0;
     border-right: 1px solid #777777;
+    text-align: left;
+    padding: 10px;
+}
+
+#sidebarRight {
+    position: fixed;
+    width: 15%;
+    height: 50%;
+    background-color: #f4f4f4;
+    top: 10%;
+    right: 0;
+    border-left: 1px solid #777777;
+    border-bottom: 1px solid #777777;
     text-align: left;
     padding: 10px;
 }
@@ -92,6 +112,13 @@ button {
     width: 65%;
     margin-left: 30%;
     margin-right: 5%;
+    text-align: center;
+}
+
+#sizeModify3 {
+    width: 50%;
+    margin-left: 30%;
+    margin-right: 20%;
     text-align: center;
 }
 
@@ -148,6 +175,6 @@ button {
     color: #999b95;
 }
 
-#starterHeader, #sizeModify, #sizeModify2 {
+#starterHeader, #sizeModify, #sizeModify2, #sizeModify3 {
     margin-top: 8%;
 }
