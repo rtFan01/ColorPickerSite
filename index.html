@@ -10,6 +10,7 @@
         <a href="index.html" class="navbarLinks">Home</a>
         <a href="StandardTemplate.html" class="navbarLinks">Standard</a>
         <a href="OneSidebarTemplate.html" class="navbarLinks">Single Sidebar</a>
+        <a href="TwoSidebarTemplate.html" class="navbarLinks">Two Sidebars</a>
     </div>
     <div id="sizeModify">
         <h1 id="starterHeader">Welcome to the Color Picker Page!</h1>
@@ -35,13 +36,18 @@
 
         var templateTwo = "<p>This template contains a navigation bar (top), a sidebar (left), a h1 header, h3 headers, h4 headers, hr tags, and paragraphs. Check the single sidebar template out <a href=\"OneSidebarTemplate.html\">here!</a></p>";
 
+        var templateThree = "<p>This template contains a navigation bar (top), two sidebars (left & right), a h1 header, h3 headers, h4 headers, hr tags, and paragraphs. Check the two sidebar template out <a href=\"TwoSidebarTemplate.html\">here!</a></p>";
+
         var onLBClick = function () {
             if (number === 0) {
+                number = 2;
+                changingDiv.innerHTML = templateThree;
+            } else if (number === 1) {
+                number = 0;
+                changingDiv.innerHTML = templateOne;
+            } else if (number === 2) {
                 number = 1;
                 changingDiv.innerHTML = templateTwo;
-            } else if (number === 1) {
-                number = 0
-                changingDiv.innerHTML = templateOne
             }
         };
 
@@ -50,8 +56,11 @@
                 number = 1;
                 changingDiv.innerHTML = templateTwo;
             } else if (number === 1) {
-                number = 0
-                changingDiv.innerHTML = templateOne
+                number = 2;
+                changingDiv.innerHTML = templateThree;
+            } else if (number === 2) {
+                number = 0;
+                changingDiv.innerHTML = templateOne;
             }
         };
 
