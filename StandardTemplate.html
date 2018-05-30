@@ -43,6 +43,11 @@
             <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorB">
             <input type="text" name="B:" id="pTextColorBBox" class="textBox">
             <br>
+            <h4>Font Size: Paragraphs</h4>
+            <br>
+            <input type="range" min="0" max="50" value="0" class="slider" id="pFontSize">
+            <input type="text" name="R:" id="pFontSizeBox" class="textBox">
+            <br>
             <h4>Text Color: Headers</h4>
             <br>
             <input type="range" min="0" max="255" value="0" class="slider" id="hTextColorR">
@@ -53,6 +58,21 @@
             <br>
             <input type="range" min="0" max="255" value="0" class="slider" id="hTextColorB">
             <input type="text" name="B:" id="hTextColorBBox" class="textBox">
+            <br>
+            <h4>Font Size: Header 1s</h4>
+            <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="h1FontSize">
+            <input type="text" name="R:" id="h1FontSizeBox" class="textBox">
+            <br>
+            <h4>Font Size: Header 3s</h4>
+            <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="h3FontSize">
+            <input type="text" name="R:" id="h3FontSizeBox" class="textBox">
+            <br>
+            <h4>Font Size: Header 4s</h4>
+            <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="h4FontSize">
+            <input type="text" name="R:" id="h4FontSizeBox" class="textBox">
             <br>
             <h4>Background Color: Nav Bar</h4>
             <br>
@@ -86,6 +106,10 @@
             <br>
             <input type="range" min="0" max="255" value="0" class="slider" id="hrColorB">
             <input type="text" name="B:" id="hrColorBBox" class="textBox">
+            <h4>Width: HR</h4>
+            <br>
+            <input type="range" min="0" max="50" value="0" class="slider" id="HRWidth">
+            <input type="text" name="R:" id="HRWidthBox" class="textBox">
         </div>
     </div>
     <script>
@@ -109,6 +133,10 @@
         var ptcGBox = document.getElementById("pTextColorGBox");
         var ptcBBox = document.getElementById("pTextColorBBox");
 
+        var pfsSlide = document.getElementById("pFontSize");
+
+        var pfsBox = document.getElementById("pFontSizeBox");
+
         var htcRSlide = document.getElementById("hTextColorR");
         var htcGSlide = document.getElementById("hTextColorG");
         var htcBSlide = document.getElementById("hTextColorB");
@@ -116,6 +144,18 @@
         var htcRBox = document.getElementById("hTextColorRBox");
         var htcGBox = document.getElementById("hTextColorGBox");
         var htcBBox = document.getElementById("hTextColorBBox");
+
+        var h1fsSlide = document.getElementById("h1FontSize");
+
+        var h1fsBox = document.getElementById("h1FontSizeBox");
+
+        var h3fsSlide = document.getElementById("h3FontSize");
+
+        var h3fsBox = document.getElementById("h3FontSizeBox");
+
+        var h4fsSlide = document.getElementById("h4FontSize");
+
+        var h4fsBox = document.getElementById("h4FontSizeBox");
 
         var nbbgRSlide = document.getElementById("nbBackgroundColorR");
         var nbbgGSlide = document.getElementById("nbBackgroundColorG");
@@ -140,6 +180,10 @@
         var hrcRBox = document.getElementById("hrColorRBox");
         var hrcGBox = document.getElementById("hrColorGBox");
         var hrcBBox = document.getElementById("hrColorBBox");
+
+        var hrwSlide = document.getElementById("HRWidth");
+
+        var hrwBox = document.getElementById("HRWidthBox");
 
         var r;
         var g;
@@ -279,6 +323,29 @@
             document.body.style.color = "rgb(" + r + "," + g + "," + b + ")";
         });
 
+        //F.S. for Pragraphs
+        pfsBox.addEventListener("change", function () {
+            s = pfsBox.value;
+            s = Math.floor(s);
+            pfsSlide.value = s;
+            for (var i = 0; i < document.getElementsByTagName("P").length; i++) {
+                if (document.getElementsByTagName("P")[i].className != "sidebarP" && document.getElementsByTagName("H1")[i].className != "sidebarRightP") {
+                    document.getElementsByTagName("P")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
+        pfsSlide.addEventListener("change", function () {
+            s = pfsSlide.value;
+            s = Math.floor(s);
+            pfsBox.value = s;
+            for (var i = 0; i < document.getElementsByTagName("P").length; i++) {
+                if (document.getElementsByTagName("P")[i].className != "sidebarP" && document.getElementsByTagName("P")[i].className != "sidebarRightP") {
+                    document.getElementsByTagName("P")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
         //T.C. for Headers
         htcRBox.addEventListener("change", function () {
             r = htcRBox.value;
@@ -391,6 +458,75 @@
             }
             for (var k = 0; k < document.getElementsByTagName("H4").length; k++) {
                 h4s[k].style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        //F.S. for Header 1s
+        h1fsBox.addEventListener("change", function () {
+            s = h1fsBox.value;
+            s = Math.floor(s);
+            h1fsSlide.value = s;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                if (document.getElementsByTagName("H1")[i].className != "sideH") {
+                    document.getElementsByTagName("H1")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
+        h1fsSlide.addEventListener("change", function () {
+            s = h1fsSlide.value;
+            s = Math.floor(s);
+            h1fsBox.value = s;
+            for (var i = 0; i < document.getElementsByTagName("H1").length; i++) {
+                if (document.getElementsByTagName("H1")[i].className != "sideH") {
+                    document.getElementsByTagName("H1")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
+        //F.S. for Header 3s
+        h3fsBox.addEventListener("change", function () {
+            s = h3fsBox.value;
+            s = Math.floor(s);
+            h3fsSlide.value = s;
+            for (var i = 0; i < document.getElementsByTagName("H3").length; i++) {
+                if (document.getElementsByTagName("H3")[i].className != "sideH") {
+                    document.getElementsByTagName("H3")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
+        h3fsSlide.addEventListener("change", function () {
+            s = h3fsSlide.value;
+            s = Math.floor(s);
+            h3fsBox.value = s;
+            for (var i = 0; i < document.getElementsByTagName("H3").length; i++) {
+                if (document.getElementsByTagName("H3")[i].className != "sideH") {
+                    document.getElementsByTagName("H3")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
+        //F.S. for Header 4s
+        h4fsBox.addEventListener("change", function () {
+            s = h4fsBox.value;
+            s = Math.floor(s);
+            h4fsSlide.value = s;
+            for (var i = 0; i < document.getElementsByTagName("H4").length; i++) {
+                if (document.getElementsByTagName("H4")[i].className != "sideH") {
+                    document.getElementsByTagName("H4")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
+        h4fsSlide.addEventListener("change", function () {
+            s = h4fsSlide.value;
+            s = Math.floor(s);
+            h4fsBox.value = s;
+            for (var i = 0; i < document.getElementsByTagName("H4").length; i++) {
+                if (document.getElementsByTagName("H4")[i].className != "sideH") {
+                    document.getElementsByTagName("H4")[i].style.fontSize = s.toString() + "px";
+                }
             }
         });
 
@@ -622,6 +758,29 @@
             for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
                 document.getElementsByTagName("HR")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
                 document.getElementsByTagName("HR")[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+        });
+
+        //Width for HR
+        hrwBox.addEventListener("change", function () {
+            w = hrwBox.value;
+            w = Math.floor(w);
+            hrwSlide.value = w;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                if (document.getElementsByTagName("HR")[i].className != "sideHR") {
+                    document.getElementsByTagName("HR")[i].style.height = w.toString() + "px";
+                }
+            }
+        });
+
+        hrwSlide.addEventListener("change", function () {
+            w = hrwSlide.value;
+            w = Math.floor(w);
+            hrwBox.value = w;
+            for (var i = 0; i < document.getElementsByTagName("HR").length; i++) {
+                if (document.getElementsByTagName("HR")[i].className != "sideHR") {
+                    document.getElementsByTagName("HR")[i].style.height = w.toString() + "px";
+                }
             }
         });
     </script>
