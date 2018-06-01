@@ -21,6 +21,8 @@
         <h3>Change the template!</h3>
         <p>This is where you can modify the colors of the page. You can also change the font size and thickness of certain elements.</p>
         <div id="sliders">
+            <hr>
+            <h3 id="color">Color</h3>
             <h4>Background Color: Body</h4>
             <br>
             <input type="range" min="0" max="255" value="0" class="slider" id="backgroundColorR">
@@ -31,22 +33,6 @@
             <br>
             <input type="range" min="0" max="255" value="0" class="slider" id="backgroundColorB">
             <input type="text" name="B:" id="backgroundColorBBox" class="textBox">
-            <br>
-            <h4>Text Color: Paragraphs</h4>
-            <br>
-            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorR">
-            <input type="text" name="R:" id="pTextColorRBox" class="textBox">
-            <br>
-            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorG">
-            <input type="text" name="G:" id="pTextColorGBox" class="textBox">
-            <br>
-            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorB">
-            <input type="text" name="B:" id="pTextColorBBox" class="textBox">
-            <br>
-            <h4>Font Size: Paragraphs</h4>
-            <br>
-            <input type="range" min="0" max="50" value="0" class="slider" id="pFontSize">
-            <input type="text" name="R:" id="pFontSizeBox" class="textBox">
             <br>
             <h4>Text Color: Headers</h4>
             <br>
@@ -59,20 +45,16 @@
             <input type="range" min="0" max="255" value="0" class="slider" id="hTextColorB">
             <input type="text" name="B:" id="hTextColorBBox" class="textBox">
             <br>
-            <h4>Font Size: Header 1s</h4>
+            <h4>Text Color: Paragraphs</h4>
             <br>
-            <input type="range" min="0" max="100" value="0" class="slider" id="h1FontSize">
-            <input type="text" name="R:" id="h1FontSizeBox" class="textBox">
+            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorR">
+            <input type="text" name="R:" id="pTextColorRBox" class="textBox">
             <br>
-            <h4>Font Size: Header 3s</h4>
+            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorG">
+            <input type="text" name="G:" id="pTextColorGBox" class="textBox">
             <br>
-            <input type="range" min="0" max="100" value="0" class="slider" id="h3FontSize">
-            <input type="text" name="R:" id="h3FontSizeBox" class="textBox">
-            <br>
-            <h4>Font Size: Header 4s</h4>
-            <br>
-            <input type="range" min="0" max="100" value="0" class="slider" id="h4FontSize">
-            <input type="text" name="R:" id="h4FontSizeBox" class="textBox">
+            <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorB">
+            <input type="text" name="B:" id="pTextColorBBox" class="textBox">
             <br>
             <h4>Background Color: Nav Bar</h4>
             <br>
@@ -106,6 +88,33 @@
             <br>
             <input type="range" min="0" max="255" value="0" class="slider" id="hrColorB">
             <input type="text" name="B:" id="hrColorBBox" class="textBox">
+            <hr>
+            <h3 id="size">Size</h3>
+            <h4>Font Size: Header 1s</h4>
+            <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="h1FontSize">
+            <input type="text" name="R:" id="h1FontSizeBox" class="textBox">
+            <br>
+            <h4>Font Size: Header 3s</h4>
+            <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="h3FontSize">
+            <input type="text" name="R:" id="h3FontSizeBox" class="textBox">
+            <br>
+            <h4>Font Size: Header 4s</h4>
+            <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="h4FontSize">
+            <input type="text" name="R:" id="h4FontSizeBox" class="textBox">
+            <br>
+            <h4>Font Size: Paragraphs</h4>
+            <br>
+            <input type="range" min="0" max="50" value="0" class="slider" id="pFontSize">
+            <input type="text" name="R:" id="pFontSizeBox" class="textBox">
+            <br>
+            <h4>Font Size: Navbar Links</h4>
+            <br>
+            <input type="range" min="0" max="50" value="0" class="slider" id="nblFontSize">
+            <input type="text" name="R:" id="nblFontSizeBox" class="textBox">
+            <br>
             <h4>Width: HR</h4>
             <br>
             <input type="range" min="0" max="50" value="0" class="slider" id="HRWidth">
@@ -172,6 +181,10 @@
         var nblcRBox = document.getElementById("nbLinkColorRBox");
         var nblcGBox = document.getElementById("nbLinkColorGBox");
         var nblcBBox = document.getElementById("nbLinkColorBBox");
+
+        var nblfSlide = document.getElementById("nblFontSize");
+
+        var nblfBox = document.getElementById("nblFontSizeBox");
 
         var hrcRSlide = document.getElementById("hrColorR");
         var hrcGSlide = document.getElementById("hrColorG");
@@ -674,7 +687,30 @@
             for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
                 document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
             }
-        })
+        });
+
+        //F.S. for Nav Bar Links
+        nblfBox.addEventListener("change", function () {
+            s = nblfBox.value;
+            s = Math.floor(s);
+            nblfSlide.value = s;
+            for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+                if (document.getElementsByTagName("A")[i].className === "navbarLinks") {
+                    document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
+
+        nblfSlide.addEventListener("change", function () {
+            s = nblfSlide.value;
+            s = Math.floor(s);
+            nblfBox.value = s;
+            for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+                if (document.getElementsByTagName("A")[i].className === "navbarLinks") {
+                    document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+                }
+            }
+        });
 
         //Color for HR
         hrcRBox.addEventListener("change", function () {
