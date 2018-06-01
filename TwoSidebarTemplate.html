@@ -27,9 +27,9 @@
     <h3 class="sideH">Webpage Links</h3>
     <a href="#sizeModify3" class="sidebarLinks">Top</a>
     <br>
-    <a href="#starterHeader" class="sidebarLinks">Details</a>
+    <a href="#color" class="sidebarLinks">Color</a>
     <br>
-    <a href="#change" class="sidebarLinks">Change</a>
+    <a href="#size" class="sidebarLinks">Size</a>
     <hr class="sideHR">
     <h3 class="sideH">Information</h3>
     <p class="sidebarP">This template contains a navigation bar (top), a sidebar (left), a h1 header, h3 headers, h4 headers, hr tags, and paragraphs.</p>
@@ -54,6 +54,8 @@
     <h3>Change the template!</h3>
     <p>This is where you can modify the colors of the page. You can also change the font size and thickness of certain elements.</p>
     <div id="sliders">
+        <hr>
+        <h3 id="color">Color</h3>
         <h4>Background Color: Body</h4>
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="backgroundColorR">
@@ -64,22 +66,6 @@
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="backgroundColorB">
         <input type="text" name="B:" id="backgroundColorBBox" class="textBox">
-        <br>
-        <h4>Text Color: Paragraphs</h4>
-        <br>
-        <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorR">
-        <input type="text" name="R:" id="pTextColorRBox" class="textBox">
-        <br>
-        <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorG">
-        <input type="text" name="G:" id="pTextColorGBox" class="textBox">
-        <br>
-        <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorB">
-        <input type="text" name="B:" id="pTextColorBBox" class="textBox">
-        <br>
-        <h4>Font Size: Paragraphs</h4>
-        <br>
-        <input type="range" min="0" max="50" value="0" class="slider" id="pFontSize">
-        <input type="text" name="R:" id="pFontSizeBox" class="textBox">
         <br>
         <h4>Text Color: Headers</h4>
         <br>
@@ -92,20 +78,16 @@
         <input type="range" min="0" max="255" value="0" class="slider" id="hTextColorB">
         <input type="text" name="B:" id="hTextColorBBox" class="textBox">
         <br>
-        <h4>Font Size: Header 1s</h4>
+        <h4>Text Color: Paragraphs</h4>
         <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="h1FontSize">
-        <input type="text" name="R:" id="h1FontSizeBox" class="textBox">
+        <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorR">
+        <input type="text" name="R:" id="pTextColorRBox" class="textBox">
         <br>
-        <h4>Font Size: Header 3s</h4>
+        <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorG">
+        <input type="text" name="G:" id="pTextColorGBox" class="textBox">
         <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="h3FontSize">
-        <input type="text" name="R:" id="h3FontSizeBox" class="textBox">
-        <br>
-        <h4>Font Size: Header 4s</h4>
-        <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="h4FontSize">
-        <input type="text" name="R:" id="h4FontSizeBox" class="textBox">
+        <input type="range" min="0" max="255" value="0" class="slider" id="pTextColorB">
+        <input type="text" name="B:" id="pTextColorBBox" class="textBox">
         <br>
         <h4>Background Color: Nav Bar</h4>
         <br>
@@ -139,10 +121,6 @@
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="hrColorB">
         <input type="text" name="B:" id="hrColorBBox" class="textBox">
-        <h4>Width: HR</h4>
-        <br>
-        <input type="range" min="0" max="50" value="0" class="slider" id="HRWidth">
-        <input type="text" name="R:" id="HRWidthBox" class="textBox">
         <h4>Background Color: Left Sidebar</h4>
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="sbBackgroundColorR">
@@ -163,16 +141,6 @@
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="sbHeaderColorB">
         <input type="text" name="B:" id="sbHeaderColorBBox" class="textBox">
-        <h4>Font Size: Left Sidebar Header 2s</h4>
-        <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="sbh2FontSize">
-        <input type="text" name="R:" id="sbh2FontSizeBox" class="textBox">
-        <br>
-        <h4>Font Size: Left Sidebar Header 3s</h4>
-        <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="sbh3FontSize">
-        <input type="text" name="R:" id="sbh3FontSizeBox" class="textBox">
-        <br>
         <h4>Text Color: Left Sidebar Paragraphs</h4>
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="sbParagraphColorR">
@@ -183,11 +151,6 @@
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="sbParagraphColorB">
         <input type="text" name="B:" id="sbParagraphColorBBox" class="textBox">
-        <h4>Font Size: Left Sidebar Paragraphs</h4>
-        <br>
-        <input type="range" min="0" max="50" value="0" class="slider" id="sbpFontSize">
-        <input type="text" name="R:" id="sbpFontSizeBox" class="textBox">
-        <br>
         <h4>Text Color: Left Sidebar Links</h4>
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="sbLinkColorR">
@@ -209,10 +172,6 @@
         <input type="range" min="0" max="255" value="0" class="slider" id="sbHRColorB">
         <input type="text" name="G:" id="sbHRColorBBox" class="textBox">
         <br>
-        <h4>Width: Left Sidebar HR</h4>
-        <br>
-        <input type="range" min="0" max="50" value="0" class="slider" id="sbHRWidth">
-        <input type="text" name="R:" id="sbHRWidthBox" class="textBox">
         <h4>Background Color: Right Sidebar</h4>
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="rsbBackgroundColorR">
@@ -233,16 +192,6 @@
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="rsbHeaderColorB">
         <input type="text" name="B:" id="rsbHeaderColorBBox" class="textBox">
-        <h4>Font Size: Right Sidebar Header 2s</h4>
-        <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="sbrh2FontSize">
-        <input type="text" name="R:" id="sbrh2FontSizeBox" class="textBox">
-        <br>
-        <h4>Font Size: Right Sidebar Header 3s</h4>
-        <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="sbrh3FontSize">
-        <input type="text" name="R:" id="sbrh3FontSizeBox" class="textBox">
-        <br>
         <h4>Text Color: Right Sidebar Paragraphs</h4>
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="rsbParagraphColorR">
@@ -253,11 +202,6 @@
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="rsbParagraphColorB">
         <input type="text" name="B:" id="rsbParagraphColorBBox" class="textBox">
-        <h4>Font Size: Right Sidebar Paragraphs</h4>
-        <br>
-        <input type="range" min="0" max="50" value="0" class="slider" id="rsbpFontSize">
-        <input type="text" name="R:" id="rsbpFontSizeBox" class="textBox">
-        <br>
         <h4>Text Color: Right Sidebar Links</h4>
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="rsbLinkColorR">
@@ -278,6 +222,81 @@
         <br>
         <input type="range" min="0" max="255" value="0" class="slider" id="rsbHRColorB">
         <input type="text" name="B:" id="rsbHRColorBBox" class="textBox">
+        <hr>
+        <h3 id="size">Size</h3>
+        <h4>Font Size: Paragraphs</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="pFontSize">
+        <input type="text" name="R:" id="pFontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Header 1s</h4>
+        <br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="h1FontSize">
+        <input type="text" name="R:" id="h1FontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Header 3s</h4>
+        <br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="h3FontSize">
+        <input type="text" name="R:" id="h3FontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Header 4s</h4>
+        <br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="h4FontSize">
+        <input type="text" name="R:" id="h4FontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Navbar Links</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="nblFontSize">
+        <input type="text" name="R:" id="nblFontSizeBox" class="textBox">
+        <br>
+        <h4>Width: HR</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="HRWidth">
+        <input type="text" name="R:" id="HRWidthBox" class="textBox">
+        <h4>Font Size: Left Sidebar Header 2s</h4>
+        <br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="sbh2FontSize">
+        <input type="text" name="R:" id="sbh2FontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Left Sidebar Header 3s</h4>
+        <br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="sbh3FontSize">
+        <input type="text" name="R:" id="sbh3FontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Left Sidebar Paragraphs</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="sbpFontSize">
+        <input type="text" name="R:" id="sbpFontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Left Sidebar Links</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="sblFontSize">
+        <input type="text" name="R:" id="sblFontSizeBox" class="textBox">
+        <br>
+        <h4>Width: Left Sidebar HR</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="sbHRWidth">
+        <input type="text" name="R:" id="sbHRWidthBox" class="textBox">
+        <h4>Font Size: Right Sidebar Header 2s</h4>
+        <br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="sbrh2FontSize">
+        <input type="text" name="R:" id="sbrh2FontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Right Sidebar Header 3s</h4>
+        <br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="sbrh3FontSize">
+        <input type="text" name="R:" id="sbrh3FontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Right Sidebar Paragraphs</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="rsbpFontSize">
+        <input type="text" name="R:" id="rsbpFontSizeBox" class="textBox">
+        <br>
+        <h4>Font Size: Right Sidebar Links</h4>
+        <br>
+        <input type="range" min="0" max="50" value="0" class="slider" id="rsblFontSize">
+        <input type="text" name="R:" id="rsblFontSizeBox" class="textBox">
+        <br>
         <h4>Width: Right Sidebar HR</h4>
         <br>
         <input type="range" min="0" max="50" value="0" class="slider" id="rsbHRWidth">
@@ -341,6 +360,10 @@
     var nblcGBox = document.getElementById("nbLinkColorGBox");
     var nblcBBox = document.getElementById("nbLinkColorBBox");
 
+    var nblfSlide = document.getElementById("nblFontSize");
+
+    var nblfBox = document.getElementById("nblFontSizeBox");
+
     var hrcRSlide = document.getElementById("hrColorR");
     var hrcGSlide = document.getElementById("hrColorG");
     var hrcBSlide = document.getElementById("hrColorB");
@@ -397,6 +420,10 @@
     var sbltcGBox = document.getElementById("sbLinkColorGBox");
     var sbltcBBox = document.getElementById("sbLinkColorBBox");
 
+    var sblfSlide = document.getElementById("sblFontSize");
+
+    var sblfBox = document.getElementById("sblFontSizeBox");
+
     var sbhrcRSlide = document.getElementById("sbHRColorR");
     var sbhrcGSlide = document.getElementById("sbHRColorG");
     var sbhrcBSlide = document.getElementById("sbHRColorB");
@@ -452,6 +479,10 @@
     var rsbltcRBox = document.getElementById("rsbLinkColorRBox");
     var rsbltcGBox = document.getElementById("rsbLinkColorGBox");
     var rsbltcBBox = document.getElementById("rsbLinkColorBBox");
+
+    var rsblfSlide = document.getElementById("rsblFontSize");
+
+    var rsblfBox = document.getElementById("rsblFontSizeBox");
 
     var rsbhrcRSlide = document.getElementById("rsbHRColorR");
     var rsbhrcGSlide = document.getElementById("rsbHRColorG");
@@ -627,7 +658,7 @@
         }
     });
 
-    //F.S. for Pragraphs
+    //F.S. for Paragraphs
     pfsBox.addEventListener("change", function () {
         s = pfsBox.value;
         s = Math.floor(s);
@@ -1014,7 +1045,30 @@
         for (var i = 0; i < document.getElementsByClassName("navbarLinks").length; i++) {
             document.getElementsByClassName("navbarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
         }
-    })
+    });
+
+    //F.S. for Nav Bar Links
+    nblfBox.addEventListener("change", function () {
+        s = nblfBox.value;
+        s = Math.floor(s);
+        nblfSlide.value = s;
+        for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+            if (document.getElementsByTagName("A")[i].className === "navbarLinks") {
+                document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+            }
+        }
+    });
+
+    nblfSlide.addEventListener("change", function () {
+        s = nblfSlide.value;
+        s = Math.floor(s);
+        nblfBox.value = s;
+        for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+            if (document.getElementsByTagName("A")[i].className === "navbarLinks") {
+                document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+            }
+        }
+    });
 
     //Color for HR
     hrcRBox.addEventListener("change", function () {
@@ -1491,7 +1545,7 @@
         }
     });
 
-    //F.S. for Sidebar Pragraphs
+    //F.S. for Sidebar Paragraphs
     sbpfsBox.addEventListener("change", function () {
         s = sbpfsBox.value;
         s = Math.floor(s);
@@ -1590,6 +1644,29 @@
         sbltcBBox.value = b;
         for (var i = 0; i < document.getElementsByClassName("sidebarLinks").length; i++) {
             document.getElementsByClassName("sidebarLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+        }
+    });
+
+    //F.S. for Sidebar Links
+    sblfBox.addEventListener("change", function () {
+        s = sblfBox.value;
+        s = Math.floor(s);
+        sblfSlide.value = s;
+        for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+            if (document.getElementsByTagName("A")[i].className === "sidebarLinks") {
+                document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+            }
+        }
+    });
+
+    sblfSlide.addEventListener("change", function () {
+        s = sblfSlide.value;
+        s = Math.floor(s);
+        sblfBox.value = s;
+        for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+            if (document.getElementsByTagName("A")[i].className === "sidebarLinks") {
+                document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+            }
         }
     });
 
@@ -2167,6 +2244,29 @@
         rsbltcBBox.value = b;
         for (var i = 0; i < document.getElementsByClassName("sidebarRightLinks").length; i++) {
             document.getElementsByClassName("sidebarRightLinks")[i].style.color = "rgb(" + r + "," + g + "," + b + ")";
+        }
+    });
+
+    //F.S. for Right Sidebar Links
+    rsblfBox.addEventListener("change", function () {
+        s = rsblfBox.value;
+        s = Math.floor(s);
+        rsblfSlide.value = s;
+        for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+            if (document.getElementsByTagName("A")[i].className === "sidebarRightLinks") {
+                document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+            }
+        }
+    });
+
+    rsblfSlide.addEventListener("change", function () {
+        s = rsblfSlide.value;
+        s = Math.floor(s);
+        rsblfBox.value = s;
+        for (var i = 0; i < document.getElementsByTagName("A").length; i++) {
+            if (document.getElementsByTagName("A")[i].className === "sidebarRightLinks") {
+                document.getElementsByTagName("A")[i].style.fontSize = s.toString() + "px";
+            }
         }
     });
 
